@@ -49,7 +49,7 @@ const AddUser = props => {
 
   return (
     <Wrapper>
-      {/* conditional to check if there is an error, and if so display the Modal */}
+      {/* conditional to check if there is an error, and if so, display the Modal */}
       {error && (
         <Modal
           title={error.title}
