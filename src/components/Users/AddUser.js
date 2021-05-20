@@ -3,6 +3,7 @@ import Card from '../UI/Card';
 import Modal from '../UI/Modal';
 import classes from './AddUser.module.css';
 import Button from '../UI/Button';
+import Wrapper from '../Helpers/Wrapper';
 
 const AddUser = props => {
   const [enteredUsername, setEnteredUsername] = useState('');
@@ -47,7 +48,7 @@ const AddUser = props => {
   };
 
   return (
-    <div>
+    <Wrapper>
       {/* conditional to check if there is an error, and if so display the Modal */}
       {error && (
         <Modal
@@ -75,7 +76,7 @@ const AddUser = props => {
           <Button type='submit'>Add User</Button>
         </form>
       </Card>
-    </div>
+    </Wrapper>
   );
 };
 

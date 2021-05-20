@@ -1,11 +1,12 @@
 import React from 'react';
 import classes from './Modal.module.css';
 import Card from './Card';
+import Wrapper from '../Helpers/Wrapper';
 import Button from './Button';
 
 const Modal = props => {
   return (
-    <div>
+    <Wrapper>
       <div className={classes.backdrop} onClick={props.onConfirm} />
       <Card className={classes.modal}>
         <header className={classes.header}>
@@ -18,7 +19,7 @@ const Modal = props => {
           <Button onClick={props.onConfirm}>Okay</Button>
         </footer>
       </Card>
-    </div>
+    </Wrapper>
   );
 };
 
