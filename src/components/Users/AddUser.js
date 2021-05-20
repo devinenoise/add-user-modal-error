@@ -6,12 +6,18 @@ import Button from '../UI/Button';
 import Wrapper from '../Helpers/Wrapper';
 
 const AddUser = props => {
+  // returns a value that allows you to work in place of state
+  // const nameInputRef = useRef();
+  // const ageInputRef = useRef();
+
   const [enteredUsername, setEnteredUsername] = useState('');
   const [enteredAge, setEnteredAge] = useState('');
   const [error, setError] = useState();
 
   const addUserHandler = event => {
     event.preventDefault();
+    // const enteredName = nameInputRef.current.value;
+    // const enteredUserAge = ageInputRef.current.value;
     // checking if the input is empty
     if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
       setError({

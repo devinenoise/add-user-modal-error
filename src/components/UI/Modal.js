@@ -28,8 +28,10 @@ const ModalOverlay = props => {
 const Modal = props => {
   return (
     <Wrapper>
+      {/* portals allow you to place components in the DOM outside of the hierarchy  */}
       {ReactDOM.createPortal(
         <Backdrop onConfirm={props.onConfirm} />,
+        // pointer to the id in the index.html page
         document.getElementById('backdrop-root')
       )}
       {ReactDOM.createPortal(
